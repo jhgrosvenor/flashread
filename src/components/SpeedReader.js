@@ -31,16 +31,16 @@ const SpeedReader = () => {
   const lastSpeedChangeRef = useRef(0);
 
   useEffect(() => {
+    document.body.className = isDarkMode ? 'bg-gray-900' : 'bg-gray-100';
+  }, [isDarkMode]);
+
+  useEffect(() => {
     if (!inputText.trim()) {
       setWords([]);
       setCurrentWordIndex(0);
       setIsPlaying(false);
       return;
     }
-
-    useEffect(() => {
-      document.body.className = isDarkMode ? 'bg-gray-900' : 'bg-gray-100';
-    }, [isDarkMode]);
 
     const wordArray = inputText
       .trim()
