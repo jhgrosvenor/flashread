@@ -5,6 +5,7 @@
 /* Optional: Add smooth scrolling and default background */
 html {
   scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
